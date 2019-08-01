@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome!</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="static/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Enriqueta|Josefin+Sans|Nunito|Nunito+Sans|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg1" background="static/Restaurants.jpg">
+    <div class="container">
+        <div class="container">
+            <div class="nav-bar">
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="col s2"><a href="/search" class="page-button"><b>RECIPES</b></a>
+                    </div>
+                    <div class="col s2"><a href="/restaurants" class="page-button"><b>RESTAURANTS</b></a>
+                    </div>
+                    <div class="col s2"><a href="/tweet" class="page-button"><b>FOOD ISSUES</b></a>
+                    </div>
+                    <div class="col s2"><a href="/about" target="blank" class="page-button"><b>ABOUT</b></a>
+
+                    </div>
+                    <div class="col s2"><a href="/login" class="page-button"><b>LOGIN</b></a>
+                    </div>
+                    <div class="col s1"></div>
+                </div>
+            </div>
+            <br>
+            <!--<br>-->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h4>RESTAURANT GENERATOR</h4>
+            <br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col s6 offset-s3">
+                        <div class="form">
+                            <font color=white>
+                                <form method="post" action="/restaurants">
+                                    Cuisine:<br>
+                                    <input type="text" name="term"><br> Distance (in kilometers):<br>
+                                    <input type="text" name="distance"> Address:
+                                    <br>
+                                    <input type="text" name="address" />
+                                    <br>
+                                    <input type="submit" name="submit" value="Search" class="w3-btn" style="background-color: #ffcc00; color:#993300;width:150px; height:35px; border-radius: 8px;"/>
+                                </form>
+                            </font>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <!--<div class="container">-->
+            <!--    <div class="row">-->
+            <!--        {%for i in range(0, len)%}-->
+            <!--        <font color=white>-->
+            <!--        <div class="col s4 m4 l4">-->
+            <!--            {{names[i]}}-->
+            <!--            <br>-->
+            <!--            <a href="{{links[i]}}" target="_blank"><img src="{{images[i]}}" class="image-fill" onerror="this.onerror=null;this.src='static/noimage.png';" /></a>-->
+            <!--        </div>-->
+            <!--        </font>-->
+            <!--        {%endfor%}-->
+            <!--    </div>-->
+            <!--</div>-->
+            <div class="container">
+                <div class="row">
+                    {% if logged_in %}
+                    <form action="/save" method="POST">
+                        {%for i in range(0, len)%}
+                        <div class="col s4 m4 l4">
+                            <p>
+                                <label>
+                                    <input class="checkbox-white" type="checkbox" name="choice{{i}}" value="{{names[i]}}`{{links[i]}}`{{images[i]}}"><span>{{names[i]}}</span>
+                                    <br>
+                                    <br>
+                                    <a href="{{links[i]}}" target="_blank"><img src="{{images[i]}}" class="image-fill" onerror="this.onerror=null;this.src='static/noimage.png';" /></a>
+                                </label>
+                            </p>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        {%endfor%}
+                        <input type="submit" name="submit" value="Save Restaurants(s)">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </form>
+                    {% else %} {%for i in range(0, len)%}
+                    <h6><div class="yellow-text col s4 m4 l4">
+                      {{names[i]}}
+                      <br>
+                      <a href="{{links[i]}}" target="_blank"><img src="{{images[i]}}" class="image-fill" onerror="this.onerror=null;this.src='static/noimage.png';"/></a>
+                      <br>
+                      <br>
+                      <br>
+                    </div></h6> {%endfor%} {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="page-footer grey darken-4 grey-text text-lighten-1">
+
+    <div class="row">
+        <!-- These divs will need classes so that they work as described -->
+        <div class="col s4"><img class="STEAMpic" src="static/STEAMS.png"></img>
+        </div>
+        <div class="col s4">
+            <a href="/logout" class="white-text">Logout &nbsp; &nbsp; &nbsp;</a>
+            <a href="/register" class="white-text">Register &nbsp; &nbsp; &nbsp;</a>
+            <a href="/saved" class="white-text">Saved Items</a>
+            <br>
+            <br>
+            <u class="white-text"><b>YEA FOOD!</b></u>
+            <p class="white-text">Your go to source for all things food.</p>
+
+        </div>
+        <div class="col s4">
+            <a href="https://www.facebook.com/upperlinecode/" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/upperlinecode?lang=en" target="_blank" class="fa fa-twitter"></a>
+            <a href="https://www.linkedin.com/company/upperline-code" target="_blank" class="fa fa-linkedin"></a>
+        </div>
+    </div>
+
+</footer>
+
+</html>

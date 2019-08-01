@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>LOGIN</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="static/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Enriqueta|Josefin+Sans|Nunito|Nunito+Sans|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<title>Performance Task</title>-->
+    <!-- Custom CSS -->
+    <!--<link href="static/style.css" rel="stylesheet" type="text/css">-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">-->
+
+    <!-- Custom Fonts -->
+    <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Enriqueta|Josefin+Sans|Nunito|Nunito+Sans|Roboto&display=swap" rel="stylesheet">-->
+</head>
+
+<body class="bg3">
+    <div class="nav-bar">
+        <div class="row">
+            <div class="col s1"></div>
+            <div class="col s2 m2 l2"><a href="/search" class="page-button"><b>RECIPES</b></a></div>
+            <div class="col s2 m2 l2"><a href="/restaurants" class="page-button"><b>RESTAURANTS</b></a></div>
+            <div class="col s2 m2 l2"><a href="/tweet" class="page-button"><b>FOOD ISSUES</b></a></div>
+            <div class="col s2 m2 l2"><a href="/about" target="blank" class="page-button"><b>ABOUT</b></a></div>
+            <div class="col s2 m2 l2"><a href="/login" class="page-button"><b>LOGIN</b></a></div>
+        </div>
+    </div>
+    <br>
+    <h1>SAVED RECIPES</h1>
+    <div class="container">
+        <div class="row">
+            {%if len_recipes == 0 %}
+            <h3>No Saved Recipes</h3>
+            {% else %}
+            <form action="/delete" method="POST">
+                {%for i in range(0, len_recipes)%}
+                <div class="col s4 m4 l4">
+
+                    <p>
+                        <label class="black-text">
+                            <input type="checkbox" name="choice{{i}}" value="{{recipes[i]['recipes']}}`{{recipes[i]['link']}}`{{recipes[i]['image']}}"><span>{{recipes[i]['recipes']}}</span>
+                            <br><br>
+                            <a href="{{recipes[i]['link']}}" target="_blank"><img src="{{recipes[i]['image']}}" class="image-fill" /></a>
+                        </label>
+                    </p>
+                    <br><br><br>
+                </div>
+                {%endfor%}
+                <br><br>
+                <div class=" col s12 m12 l12"> <input type="submit" name="submit" value="Delete Recipe(s)"> </div>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+    <h1>SAVED RESTAURANTS</h1>
+    <div class="container">
+        <div class="row">
+            {%if len_restaurants == 0 %}
+            <h3>No Saved Restaurants</h3>
+            {% else %}
+            <form action="/delete" method="POST">
+                {%for i in range(0, len_restaurants)%}
+                    <div class="col s4 m4 l4">
+
+                        <p>
+                            <label class="black-text">
+                                <input type="checkbox" name="choice{{i}}" value="{{restaurants[i]['restaurants']}}`{{restaurants[i]['link']}}`{{restaurants[i]['image']}}"><span>{{restaurants[i]['restaurants']}}</span>
+                                <br><br>
+                                <a href="{{restaurants[i]['link']}}" target="_blank"><img src="{{restaurants[i]['image']}}" class="image-fill" /></a>
+                            </label>
+                        </p>
+                        <br><br><br>
+                    </div>
+                {%endfor%}
+                <div class=" col s12 m12 l12"> <input type="submit" name="submit" value="Delete Restaurant(s)"> </div>
+            </form>
+            {% endif %}
+            <br>
+            <br>
+        </div>
+    </div>
+
+</body>
+    <footer class="page-footer grey darken-4 grey-text text-lighten-1">
+
+        <div class="row">
+            <!-- These divs will need classes so that they work as described -->
+            <div class="col s4"><img class="STEAMpic" src="static/STEAMS.png"></img>
+            </div>
+            <div class="col s4">
+                <a href="/logout" class="white-text">Logout &nbsp; &nbsp; &nbsp;</a>
+                <a href="/register" class="white-text">Register &nbsp; &nbsp; &nbsp;</a>
+                <a href="/saved" class="white-text">Saved Items</a>
+                <br>
+                <br>
+                <u class="white-text"><b>YEA FOOD!</b></u>
+                <p class="white-text">Your go to source for all things food.</p>
+
+            </div>
+            <div class="col s4">
+                <a href="https://www.facebook.com/upperlinecode/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/upperlinecode?lang=en" target="_blank" class="fa fa-twitter"></a>
+                <a href="https://www.linkedin.com/company/upperline-code" target="_blank" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+
+    </footer>
+
+</html>

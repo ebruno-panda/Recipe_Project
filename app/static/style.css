@@ -1,0 +1,374 @@
+/*body{*/
+/*    background-color: yellow;*/
+/*}*/
+
+/*This is a gradient for the background. Delete it if you don't like it! */
+/*body {*/
+/*  height: 100vh;*/
+/*  margin-top: 30px;*/
+  /*background: #9796f0;*/  /* fallback for old browsers
+  background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6
+  background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+
+/*}*/
+
+/*Could be a good font?*/
+body {
+  text-align: center;
+  padding: 5px;
+  color: black;
+  font-family: 'Josefin Sans', sans-serif;
+  /*background-color: grey;*/
+}
+
+h3 {
+  text-align: center;
+  color: black;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  /*background-color: grey;*/
+}
+
+
+/*h1 {*/
+/*  text-align: center;*/
+/*  padding: 5px;*/
+/*  color: black;*/
+/*  font-family: 'Josefin Sans', sans-serif;*/
+/*}*/
+
+img{
+
+    width: 30%;
+}
+
+h1{
+    color: #333F87;
+    font-family: 'Baloo', cursive;
+    text-shadow: 2px 2px #499AC9;
+    text-align: center;
+    font-size: 60px;
+}
+
+h5{
+    color: #2d663e;
+    font-family: 'Baloo', cursive;
+    text-shadow: 2px 2px #4ac26d;
+    text-align: center;
+    font-size: 60px;
+}
+
+h6{
+    color: #2d663e;
+    font-family: 'Baloo', cursive;
+    text-align: center;
+    font-size: 20px;
+}
+
+h7{
+    color: #333F87;
+    font-family: 'Baloo', cursive;
+    text-align: center;
+    font-size: 20px;
+}
+
+h4{
+    color: #ffffb3;
+    font-family: 'Baloo', cursive;
+    text-shadow: 2px 2px #ffa64d;
+    text-align: center;
+    font-size: 40px;
+}
+
+h2{
+    color: #333F87;
+    font-family: 'Baloo', cursive;
+    text-shadow: 2px 2px #499AC9;
+    text-align: center;
+    font-size: 40px;
+}
+
+.form{
+background-color: purple;
+padding: 10px;
+margin: 0 auto;
+
+}
+
+.login_form{
+  padding-left: 200px;
+  padding-right: 200px;
+}
+#tweetScreen {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  padding-top: 5;
+
+}
+
+/*.col{*/
+/*  color:yellow;*/
+/*}*/
+
+.bg1{
+    /*min-height: 100%;*/
+    /*min-width: 1024px;*/
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+  /*display:block;*/
+  /*margin:auto;*/
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg3{
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.bg4{
+  background: #a8ff78;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.recipesClass{
+  background: white;
+}
+
+.bg{
+    /*min-height: 100%;*/
+    /*min-width: 1024px;*/
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*position: fixed;*/
+    /*top: 0;*/
+   /*left: 0;*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+hr{
+  height: 30px;
+  color: red;
+  background-color: red;
+  border: none;
+}
+.STEAMpic{
+  width: 200px;
+}
+
+/*.nav-bar{*/
+/*  font-family: 'Niconne', cursive;*/
+/*}*/
+
+
+.nav-bar{
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.twitter-share-button{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+  color: black;
+
+}
+
+.nbar{
+  background-color: #0099cc;
+}
+
+/*So that all images in the results are the same size!*/
+.image-fill {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+form, select, input, option {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+button {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav-bar {
+  background-color: yellow;
+}
+
+
+.nav-bar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+}
+
+ /*Change the color of links on hover*/
+.nav-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Add a color to the active/current link */
+/*.nav-bar a.active {*/
+/*  background-color: green;*/
+/*  color: white;*/
+/*}*/
+
+/*.w3-bar {*/
+/*  font-family: 'Josefin Sans', sans-serif;*/
+/*  margin: auto;*/
+/*  text-align: center;*/
+/*  display: inline-block;*/
+/*}*/
+
+/*.container {*/
+/*  width: 800px;*/
+/*  height: 80px;*/
+/*}*/
+
+footer.page-footer {
+  height: 200px;
+  padding-top: 60px;
+  border-radius: 25px;
+}
+ /*Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 15%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+.bot_links:hover{
+color: #55ACEE;
+}
+.fa-facebook:hover {
+  color: #3B5998;
+}
+
+.fa-twitter:hover {
+  color: #55ACEE;
+}
+
+.fa-linkedin:hover {
+  color: #007bb5;
+}
+
+.fa-facebook {
+  /*background: #3B5998;*/
+  color: orange;
+}
+
+.fa-linkedin {
+  /*background: #3B5998;*/
+  color: orange;
+}
+.fa-twitter {
+  /*background: #55ACEE;*/
+  color: orange;
+}
+.fa-instagram {
+  /*background: #55ACEE;*/
+  color: orange;
+}
+
+
+
+
+.container {
+  width: 100%;
+}
+
+label {
+    color: black;
+}
+
+.checkbox-white[type="checkbox"] + label:before{
+  border: 2px solid white;
+  background: transparent;
+}
+
+.centered{
+  text-align: center;
+}
+
+
+/* The dropdown container */
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
